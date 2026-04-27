@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelang Imut | Koleksi Aksesoris Cantik</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Gelang<span>Imut</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#products">Koleksi</a></li>
+            <li><a href="#about">Tentang Kami</a></li>
+        </ul>
+        <div class="nav-icons">
+            <div class="cart-icon">
+                <i class="fas fa-shopping-bag"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Sentuhan Manis untuk Pergelangan Tanganmu</h1>
+            <p>Temukan koleksi gelang handmade unik yang dirancang khusus untuk menambah kecantikan harimu.</p>
+            <a href="#products" class="btn-main">Lihat Koleksi</a>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <h2 class="section-title">Koleksi Terpopuler</h2>
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <div class="img-badge">Best Seller</div>
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=500" alt="Gelang Daisy">
+                </div>
+                <div class="card-info">
+                    <h3>Gelang Sweet Daisy</h3>
+                    <p class="price">Rp 45.000</p>
+                    <button class="cart-btn">Tambah ke Keranjang</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1573408302185-912781878532?q=80&w=500" alt="Gelang Pastel">
+                </div>
+                <div class="card-info">
+                    <h3>Pastel Dream Beads</h3>
+                    <p class="price">Rp 35.000</p>
+                    <button class="cart-btn">Tambah ke Keranjang</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1535105265627-515977ec44f4?q=80&w=500" alt="Gelang Crystal">
+                </div>
+                <div class="card-info">
+                    <h3>Aurora Crystal Link</h3>
+                    <p class="price">Rp 65.000</p>
+                    <button class="cart-btn">Tambah ke Keranjang</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=500" alt="Gelang Minimalist">
+                </div>
+                <div class="card-info">
+                    <h3>Minimalist Gold Chain</h3>
+                    <p class="price">Rp 55.000</p>
+                    <button class="cart-btn">Tambah ke Keranjang</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-card">
+            <h2>Tentang Gelang Imut</h2>
+            <p>Berawal dari hobi merangkai manik-manik, <strong>Gelang Imut</strong> kini hadir sebagai toko aksesoris favorit di <strong>Jakarta</strong>. Kami percaya bahwa aksesoris kecil bisa memberikan kebahagiaan besar bagi pemakainya.</p>
+            <div class="about-features">
+                <span><i class="fas fa-heart"></i> Handmade</span>
+                <span><i class="fas fa-truck"></i> Kirim Se-Indonesia</span>
+                <span><i class="fas fa-check-circle"></i> Kualitas Premium</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Gelang<span>Imut</span></div>
+            <p>Showroom: Jl. Kenangan No. 12, Jakarta Selatan</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gelang Imut Jakarta. Dibuat dengan penuh cinta.</p>
+        </div>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.cart-btn');
+        const badge = document.getElementById('cart-count');
+        let count = 0;
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                count++;
+                badge.innerText = count;
+                
+                // Efek visual sederhana
+                btn.innerText = "Ditambahkan!";
+                btn.style.background = "#ff99cc";
+                
+                setTimeout(() => {
+                    btn.innerText = "Tambah ke Keranjang";
+                    btn.style.background = "#ffb3d9";
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
